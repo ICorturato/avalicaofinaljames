@@ -1,0 +1,843 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< br.com.fatec:catalogo >------------------------
+[INFO] Building catalogo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.2:run (default-cli) > test-compile @ catalogo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ catalogo ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 9 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ catalogo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ catalogo ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ catalogo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.2:run (default-cli) < test-compile @ catalogo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.2:run (default-cli) @ catalogo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-05-22T16:07:58.070-03:00  INFO 18584 --- [catalogo] [           main] b.c.fatec.catalogo.CatalogoApplication   : Starting CatalogoApplication using Java 23 with PID 18584 (C:\Users\Igor\Downloads\catalogo-master 20 05\catalogo-master\catalogo-master\target\classes started by Igor in C:\Users\Igor\Downloads\catalogo-master 20 05\catalogo-master\catalogo-master)
+2026-05-22T16:07:58.072-03:00  INFO 18584 --- [catalogo] [           main] b.c.fatec.catalogo.CatalogoApplication   : The following 1 profile is active: "dev"
+2026-05-22T16:07:58.665-03:00  INFO 18584 --- [catalogo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-22T16:07:58.717-03:00  INFO 18584 --- [catalogo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-05-22T16:07:59.156-03:00  INFO 18584 --- [catalogo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-22T16:07:59.169-03:00  INFO 18584 --- [catalogo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-22T16:07:59.169-03:00  INFO 18584 --- [catalogo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-05-22T16:07:59.216-03:00  INFO 18584 --- [catalogo] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-22T16:07:59.217-03:00  INFO 18584 --- [catalogo] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1094 ms
+2026-05-22T16:07:59.335-03:00  INFO 18584 --- [catalogo] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-22T16:07:59.379-03:00  INFO 18584 --- [catalogo] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2026-05-22T16:07:59.405-03:00  INFO 18584 --- [catalogo] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-22T16:07:59.640-03:00  INFO 18584 --- [catalogo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-22T16:07:59.665-03:00  INFO 18584 --- [catalogo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-22T16:07:59.818-03:00  INFO 18584 --- [catalogo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:catalogodb user=SA
+2026-05-22T16:07:59.820-03:00  INFO 18584 --- [catalogo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-22T16:07:59.840-03:00  WARN 18584 --- [catalogo] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-22T16:07:59.858-03:00  INFO 18584 --- [catalogo] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-22T16:08:00.600-03:00  INFO 18584 --- [catalogo] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists tb_categoria cascade 
+Hibernate: 
+    drop table if exists tb_produto cascade 
+Hibernate: 
+    drop table if exists tb_usuario cascade 
+Hibernate: 
+    create table tb_categoria (
+        id_categoria bigint generated by default as identity,
+        nome varchar(255) not null,
+        primary key (id_categoria)
+    )
+Hibernate: 
+    create table tb_produto (
+        quantidade integer not null,
+        valor numeric(38,2) not null,
+        data_atualizacao timestamp(6),
+        id_categoria_fk bigint not null,
+        id_produto bigint generated by default as identity,
+        nome varchar(100) not null,
+        primary key (id_produto)
+    )
+Hibernate: 
+    create table tb_usuario (
+        id_usuario bigint generated by default as identity,
+        password varchar(255) not null,
+        role varchar(255),
+        username varchar(255) not null unique,
+        primary key (id_usuario)
+    )
+Hibernate: 
+    alter table if exists tb_produto 
+       add constraint FKfcy6r08fp96f9v1wd1us63l7f 
+       foreign key (id_categoria_fk) 
+       references tb_categoria
+2026-05-22T16:08:00.646-03:00  INFO 18584 --- [catalogo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-22T16:08:00.983-03:00  WARN 18584 --- [catalogo] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-22T16:08:01.003-03:00  INFO 18584 --- [catalogo] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-05-22T16:08:01.420-03:00  INFO 18584 --- [catalogo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-05-22T16:08:01.427-03:00  INFO 18584 --- [catalogo] [           main] b.c.fatec.catalogo.CatalogoApplication   : Started CatalogoApplication in 3.707 seconds (process running for 4.007)
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    insert 
+    into
+        tb_usuario
+        (password, role, username, id_usuario) 
+    values
+        (?, ?, ?, default)
+>>> Usuário ADMIN criado com sucesso (admin / admin123)
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    insert 
+    into
+        tb_usuario
+        (password, role, username, id_usuario) 
+    values
+        (?, ?, ?, default)
+>>> Usuário comum criado com sucesso (usuario / usuario123)
+2026-05-22T16:10:34.416-03:00  INFO 18584 --- [catalogo] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-22T16:10:34.417-03:00  INFO 18584 --- [catalogo] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-22T16:10:34.419-03:00  INFO 18584 --- [catalogo] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    insert 
+    into
+        tb_categoria
+        (nome, id_categoria) 
+    values
+        (?, default)
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto 
+    from
+        tb_produto pm1_0 
+    where
+        pm1_0.nome=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        tb_produto
+        (id_categoria_fk, data_atualizacao, nome, quantidade, valor, id_produto) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        c1_0.id_categoria,
+        c1_0.nome,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    join
+        tb_categoria c1_0 
+            on c1_0.id_categoria=pm1_0.id_categoria_fk 
+    where
+        pm1_0.id_produto=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        c1_0.id_categoria,
+        c1_0.nome,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    join
+        tb_categoria c1_0 
+            on c1_0.id_categoria=pm1_0.id_categoria_fk 
+    where
+        pm1_0.id_produto=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        c1_0.id_categoria,
+        c1_0.nome,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    join
+        tb_categoria c1_0 
+            on c1_0.id_categoria=pm1_0.id_categoria_fk 
+    where
+        pm1_0.id_produto=?
+Hibernate: 
+    update
+        tb_produto 
+    set
+        id_categoria_fk=?,
+        data_atualizacao=?,
+        nome=?,
+        quantidade=?,
+        valor=? 
+    where
+        id_produto=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        um1_0.id_usuario,
+        um1_0.password,
+        um1_0.role,
+        um1_0.username 
+    from
+        tb_usuario um1_0 
+    where
+        um1_0.username=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0 
+    order by
+        pm1_0.data_atualizacao desc
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        pm1_0.id_produto,
+        pm1_0.id_categoria_fk,
+        pm1_0.data_atualizacao,
+        pm1_0.nome,
+        pm1_0.quantidade,
+        pm1_0.valor 
+    from
+        tb_produto pm1_0
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0 
+    where
+        cm1_0.id_categoria=?
+Hibernate: 
+    select
+        cm1_0.id_categoria,
+        cm1_0.nome 
+    from
+        tb_categoria cm1_0

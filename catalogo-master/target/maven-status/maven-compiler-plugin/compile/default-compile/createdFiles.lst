@@ -1,0 +1,17 @@
+br\com\fatec\catalogo\models\ProdutoModel.class
+br\com\fatec\catalogo\models\CategoriaModel.class
+br\com\fatec\catalogo\repositories\ProdutoRepository.class
+br\com\fatec\catalogo\repositories\CategoriaRepository.class
+br\com\fatec\catalogo\repositories\UsuarioRepository.class
+br\com\fatec\catalogo\models\UsuarioModel.class
+br\com\fatec\catalogo\services\CustomUserDetailsService.class
+br\com\fatec\catalogo\controllers\CategoriaController.class
+br\com\fatec\catalogo\services\CategoriaService.class
+br\com\fatec\catalogo\security\SecurityConfig.class
+br\com\fatec\catalogo\services\UsuarioService.class
+br\com\fatec\catalogo\config\DataSeeder.class
+br\com\fatec\catalogo\controllers\UsuarioController.class
+br\com\fatec\catalogo\controllers\ProdutoController.class
+br\com\fatec\catalogo\CatalogoApplication.class
+br\com\fatec\catalogo\services\ProdutoService.class
+br\com\fatec\catalogo\controllers\LoginController.class
