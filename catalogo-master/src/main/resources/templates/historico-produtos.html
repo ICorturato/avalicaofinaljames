@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico de Atualizacoes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/produtos}">FATEC Catalogo</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/produtos}">Produtos</a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link active" th:href="@{/produtos/historico}">Historico</a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/categorias/novo}">Nova Categoria</a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/usuarios/novo}">Novo usuario</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <span class="navbar-text text-white me-3" sec:authorize="isAuthenticated()">
+                    Ola, <strong sec:authentication="name">Usuario</strong>
+                </span>
+
+                <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                    <button type="submit" class="btn btn-light btn-sm text-primary fw-bold">Sair</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="card shadow">
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Auditoria de Produtos</h2>
+            <a th:href="@{/produtos}" class="btn btn-secondary">Voltar</a>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover align-middle">
+                <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Estoque</th>
+                    <th>Data de Alteracao</th>
+                    <th>Tipo de Alteracao</th>
+                    <th>Autor da Acao</th>
+                    <th>Data da Acao</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="a : ${auditorias}" th:classappend="${a.estoque != null and a.estoque < 5} ? 'table-danger' : ''">
+                    <td th:text="${a.idProduto}"></td>
+                    <td th:text="${a.produto}"></td>
+                    <td>
+                        <span th:text="${a.estoque != null ? a.estoque : 0}"
+                              th:classappend="${a.estoque != null and a.estoque < 5} ? 'badge bg-danger' : 'badge bg-success'"></span>
+                    </td>
+                    <td th:text="${a.dataAlteracao != null ? #temporals.format(a.dataAlteracao, 'dd/MM/yyyy HH:mm:ss') : 'Sem registro'}"></td>
+                    <td>
+                        <span class="badge"
+                              th:classappend="${a.tipoAlteracao == 'DELETE' ? 'bg-danger' : (a.tipoAlteracao == 'ALTERAÇÃO' ? 'bg-warning text-dark' : 'bg-success')}"
+                              th:text="${a.tipoAlteracao}"></span>
+                    </td>
+                    <td th:text="${a.autorAcao != null ? a.autorAcao : 'Sistema'}"></td>
+                    <td th:text="${a.dataAcao != null ? #temporals.format(a.dataAcao, 'dd/MM/yyyy HH:mm:ss') : 'Sem registro'}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div th:if="${#lists.isEmpty(auditorias)}" class="alert alert-info text-center">
+                Nenhuma acao registrada.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
